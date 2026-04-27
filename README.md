@@ -70,14 +70,14 @@ python sample.py \
 
 ## Pretrained weights
 
-Two seed-42 checkpoints (n=8, 4000 epochs each, lowest-FID snapshot under fixed $\gamma=1.0$ evaluation) are bundled in `weights/`:
+Two checkpoints (n=8, 4000 epochs each, lowest-FID snapshot under fixed $\gamma=1.0$ evaluation) are bundled in `weights/`:
 
 | File | Method | FID ($\gamma=1.0$) | Epoch |
 |------|--------|----------|------------|
 | `seed42_n8_noabc.pt` | Standard   | 7.28 | 3799 |
 | `seed42_n8_abc.pt`   | ABC (ours) | 5.79 | 3399 |
 
-Numbers are seed-42 only.  Multi-seed (42, 43, 44) results in the paper appear in Table 1.
+Numbers are single-seed only.  Multi-seed results in the paper appear in Table 1.
 
 ## What ABC does
 
