@@ -72,7 +72,7 @@ python sample.py \
 
 Two checkpoints (n=8, 4000 epochs each, lowest-FID snapshot under fixed $\gamma=1.0$ evaluation) are bundled in `weights/`:
 
-| File | Method | FID ($\gamma=1.0$) | Epoch |
+| File | Method | FID | Epoch |
 |------|--------|----------|------------|
 | `seed42_n8_noabc.pt` | Standard   | 7.28 | 3799 |
 | `seed42_n8_abc.pt`   | ABC (ours) | 5.79 | 3399 |

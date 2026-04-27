@@ -8,7 +8,7 @@
 
 Two checkpoints, both DriftDiT-Small (~26.6M params), trained on CIFAR-10 from scratch with seed 42 and identical hyperparameters except the centroid estimator.  Each file is the lowest-FID snapshot recorded during training under fixed $\gamma=1.0$ evaluation.
 
-| File | Method | FID ($\gamma=1.0$) | Epoch |
+| File | Method | FID | Epoch |
 |------|--------|----------|------------|
 | `seed42_n8_noabc.pt` | Standard (uncorrected $T_n$) | 7.28 | 3799 |
 | `seed42_n8_abc.pt`   | ABC-corrected $T_n^{\text{ABC}}$ | 5.79 | 3399 |
