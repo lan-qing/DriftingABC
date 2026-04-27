@@ -74,8 +74,8 @@ Two seed-42 checkpoints (n=8, 4000 epochs each, lowest-FID snapshot under fixed 
 
 | File | Method | FID ($\gamma=1.0$) | Epoch |
 |------|--------|----------|------------|
-| `seed42_n8_noabc.pt` | Standard   | 7.25 | 3799 |
-| `seed42_n8_abc.pt`   | ABC (ours) | 5.83 | 3399 |
+| `seed42_n8_noabc.pt` | Standard   | 7.28 | 3799 |
+| `seed42_n8_abc.pt`   | ABC (ours) | 5.79 | 3399 |
 
 Numbers are seed-42 only.  Multi-seed (42, 43, 44) results in the paper appear in Table 1.
 
@@ -93,7 +93,7 @@ which has a pointwise $O(1/n)$ bias.  ABC subtracts the in-batch plug-in of the 
 
 $$T_n^{\text{ABC}} = (1 - \sum_i \alpha_i^2)\, T_n + \sum_i \alpha_i^2\, \mathbf{y}_i,$$
 
-which has $O(1/n^2)$ residual bias and provably no first-order variance inflation.  In code, this is two extra lines (see `drifting.py`).
+which has $O(1/n^2)$ residual bias and provably no first-order variance inflation.
 
 ## Citation
 
