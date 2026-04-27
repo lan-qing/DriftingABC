@@ -91,7 +91,7 @@ $$T_n = \sum_i \alpha_i \mathbf{y}_i, \quad \alpha_i = w_i / \sum_j w_j,$$
 
 which has a pointwise $O(1/n)$ bias.  ABC subtracts the in-batch plug-in of the leading bias term, yielding
 
-$$T_n^{\text{ABC}} = (1 - \sum_i \alpha_i^2)\, T_n + \sum_i \alpha_i^2\, \mathbf{y}_i,$$
+$$T_n^{\text{ABC}} = (1 - \sum_i \alpha_i^2) T_n + \sum_i \alpha_i^2 \mathbf{y}_i,$$
 
 which has $O(1/n^2)$ residual bias and provably no first-order variance inflation.
 
