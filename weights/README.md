@@ -1,11 +1,17 @@
 # Pretrained weights — seed 42, $n=8$, 4000 epochs each
 
+> **Note for anonymous review.** Anonymous GitHub / 4open.science may only show
+> Git LFS pointer files for the `.pt` checkpoints rather than the checkpoint
+> contents themselves. The actual weights exceed the anonymous repository file
+> size limit and should be obtained from the GitHub LFS repository or provided
+> separately by the authors.
+
 Two checkpoints, both DriftDiT-Small (~26.6M params), trained on CIFAR-10 from scratch with seed 42 and identical hyperparameters except the centroid estimator.  Each file is the lowest-FID snapshot recorded during training under fixed $\gamma=1.0$ evaluation.
 
 | File | Method | FID ($\gamma=1.0$) | Epoch |
 |------|--------|----------|------------|
-| `seed42_n8_noabc.pt` | Standard (uncorrected $T_n$) | 7.25 | 3799 |
-| `seed42_n8_abc.pt`   | ABC-corrected $T_n^{\text{ABC}}$ | 5.83 | 3399 |
+| `seed42_n8_noabc.pt` | Standard (uncorrected $T_n$) | 7.28 | 3799 |
+| `seed42_n8_abc.pt`   | ABC-corrected $T_n^{\text{ABC}}$ | 5.79 | 3399 |
 
 ## Loading
 
@@ -22,7 +28,3 @@ model.eval()
 ```
 
 `sample.py` does this automatically; just pass `--ckpt weights/seed42_n8_abc.pt`.
-
-## Provenance
-
-Trained on a single NVIDIA A100 80GB over ~46 hours per checkpoint.  Multi-seed numbers in the paper (Table 1) average over seeds 42, 43, 44.
