@@ -6,7 +6,7 @@
 > size limit and should be obtained from the GitHub LFS repository or provided
 > separately by the authors.
 
-Two checkpoints, both DriftDiT-Small (~26.6M params), trained on CIFAR-10 from scratch with seed 42 and identical hyperparameters except the centroid estimator.  Each file is the lowest-FID snapshot recorded during training under fixed $\gamma=1.0$ evaluation.
+Two checkpoints, both DriftDiT-Small (~26.6M params), trained on CIFAR-10 from scratch with seed 42 and identical hyperparameters except the centroid estimator.  Each file is the lowest-FID snapshot recorded during training.
 
 | File | Method | FID | Epoch |
 |------|--------|----------|------------|
@@ -15,7 +15,7 @@ Two checkpoints, both DriftDiT-Small (~26.6M params), trained on CIFAR-10 from s
 
 ## Loading
 
-Each `.pt` is a PyTorch dict containing `model`, `ema`, `optimizer`, `scheduler`, `epoch`, `step`, `config`, `best_fid`, and `fid_results`.  For inference, prefer the EMA snapshot:
+Each `.pt` is a PyTorch dict containing `model`, `ema`, `config`, `best_fid`, `best_alpha`, and `epoch`.  For inference, prefer the EMA snapshot:
 
 ```python
 import torch

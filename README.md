@@ -5,7 +5,7 @@ Minimal demo code to reproduce the CIFAR-10 results in **"Subsampling Bias in Dr
 ## Layout
 
 ```
-.release/
+DriftingABC/
 ├── README.md
 ├── requirements.txt
 ├── model.py             # DriftDiT (DiT backbone with adaLN-Zero)
@@ -70,7 +70,7 @@ python sample.py \
 
 ## Pretrained weights
 
-Two checkpoints (n=8, 4000 epochs each, lowest-FID snapshot under fixed $\gamma=1.0$ evaluation) are bundled in `weights/`:
+Two checkpoints (n=8, 4000 epochs each) are bundled in `weights/`:
 
 | File | Method | FID | Epoch |
 |------|--------|----------|------------|
