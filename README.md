@@ -1,6 +1,26 @@
 # ABC: Analytical Bias Correction for Drifting Models
 
+[![arXiv](https://img.shields.io/badge/arXiv-2604.27239-b31b1b.svg)](https://arxiv.org/abs/2604.27239)
+[![NeurIPS2026](https://img.shields.io/badge/NeurIPS2026-f5c74e.svg)](https://neurips.cc/Conferences/2026)
+
 Minimal demo code to reproduce the CIFAR-10 results in **"Subsampling Bias in Drifting Models and Its Analytical Correction"**.
+
+## What ABC does
+
+The drifting model needs the kernel-weighted centroid
+
+$$T^* = \mathbb{E}[w \mathbf{y}] / \mathbb{E}[w]$$
+
+over the full reference distribution.  In a minibatch of $n$ samples we have
+
+$$T_n = \sum_i \alpha_i \mathbf{y}_i, \quad \alpha_i = w_i / \sum_j w_j,$$
+
+which has a pointwise $O(1/n)$ bias.  ABC subtracts the in-batch plug-in of the leading bias term, yielding
+
+$$T_n^{\text{ABC}} = (1 - \sum_i \alpha_i^2) T_n + \sum_i \alpha_i^2 \mathbf{y}_i,$$
+
+which has $O(1/n^2)$ residual bias and provably no first-order variance inflation.
+
 
 ## Layout
 
@@ -79,22 +99,14 @@ Two checkpoints (n=8, 4000 epochs each) are bundled in `weights/`:
 
 Numbers are single-seed only.  Multi-seed results in the paper appear in Table 1.
 
-## What ABC does
+## 📝 Reference
+If you find this repository or our work helpful, please consider citing:
 
-The drifting model needs the kernel-weighted centroid
-
-$$T^* = \mathbb{E}[w \mathbf{y}] / \mathbb{E}[w]$$
-
-over the full reference distribution.  In a minibatch of $n$ samples we have
-
-$$T_n = \sum_i \alpha_i \mathbf{y}_i, \quad \alpha_i = w_i / \sum_j w_j,$$
-
-which has a pointwise $O(1/n)$ bias.  ABC subtracts the in-batch plug-in of the leading bias term, yielding
-
-$$T_n^{\text{ABC}} = (1 - \sum_i \alpha_i^2) T_n + \sum_i \alpha_i^2 \mathbf{y}_i,$$
-
-which has $O(1/n^2)$ residual bias and provably no first-order variance inflation.
-
-## Citation
-
-Anonymous submission.  Citation will be added upon acceptance.
+```bibtex
+@inproceedings{zhang2026analytical,
+  title={Analytical Bias Correction for Subsampling Bias in Drifting Models},
+  author={Zhang, Jiaru and Zeyun, Deng and Lu, Juanwu and Ziran, Wang and Ruqi, Zhang},
+  booktitle={NeurIPS},
+  year={2026}
+}
+```
