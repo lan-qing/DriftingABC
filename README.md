@@ -49,13 +49,7 @@ pip install -r requirements.txt
 
 DINOv2 weights are downloaded on first run via `torch.hub` (no manual fetch needed).
 
-> **Note on DINOv2 / `torch.hub`.** The encoder pulls the latest `facebookresearch/dinov2`
-> repo from `torch.hub`. We tested with the repo state as of late 2025 (DINOv2 ViT-S/14,
-> hub API `torch.hub.load("facebookresearch/dinov2", "dinov2_vits14", ...)`).
-> If upstream renames or removes the entry point in the future, you may need to either
-> (a) install a known-good commit manually and load it from a local checkpoint, or
-> (b) replace `feature_encoder.py` with any frozen ViT-S/14-style encoder. The drifting
-> loss only relies on multi-scale GAP features and is encoder-agnostic.
+> **Note on DINOv2 / `torch.hub`.** The encoder pulls the latest `facebookresearch/dinov2` repo from `torch.hub`. We tested with the repo state as of late 2025 (DINOv2 ViT-S/14,hub API `torch.hub.load("facebookresearch/dinov2", "dinov2_vits14", ...)`). If upstream renames or removes the entry point in the future, you may need to either (a) install a known-good commit manually and load it from a local checkpoint, or (b) replace `feature_encoder.py` with any frozen ViT-S/14-style encoder. The drifting loss only relies on multi-scale GAP features and is encoder-agnostic.
 
 ## Reproduce
 
@@ -104,7 +98,7 @@ If you find this repository or our work helpful, please consider citing:
 
 ```bibtex
 @inproceedings{zhang2026analytical,
-  title={Analytical Bias Correction for Subsampling Bias in Drifting Models},
+  title={Analytical Correction for Subsampling Bias in Drifting Models},
   author={Zhang, Jiaru and Zeyun, Deng and Lu, Juanwu and Ziran, Wang and Ruqi, Zhang},
   booktitle={NeurIPS},
   year={2026}
