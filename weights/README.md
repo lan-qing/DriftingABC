@@ -1,11 +1,5 @@
 # Pretrained weights — seed 42, $n=8$, 4000 epochs each
 
-> **Note for anonymous review.** Anonymous GitHub / 4open.science may only show
-> Git LFS pointer files for the `.pt` checkpoints rather than the checkpoint
-> contents themselves. The actual weights exceed the anonymous repository file
-> size limit and should be obtained from the GitHub LFS repository or provided
-> separately by the authors.
-
 Two checkpoints, both DriftDiT-Small (~26.6M params), trained on CIFAR-10 from scratch with seed 42 and identical hyperparameters except the centroid estimator.  Each file is the lowest-FID snapshot recorded during training.
 
 | File | Method | FID | Epoch |
