@@ -3,7 +3,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2604.27239-b31b1b.svg)](https://arxiv.org/abs/2604.27239)
 [![NeurIPS2026](https://img.shields.io/badge/NeurIPS2026-68448b.svg)](https://neurips.cc/Conferences/2026)
 
-Minimal demo code to reproduce the CIFAR-10 results in **"Subsampling Bias in Drifting Models and Its Analytical Correction"**.
+Minimal demo code to reproduce the CIFAR-10 results in **"Analytical Correction for Subsampling Bias in Drifting Models"**.
 
 ## What ABC does
 
