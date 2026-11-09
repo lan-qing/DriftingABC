@@ -1,7 +1,7 @@
 # ABC: Analytical Bias Correction for Drifting Models
 
 [![arXiv](https://img.shields.io/badge/arXiv-2604.27239-b31b1b.svg)](https://arxiv.org/abs/2604.27239)
-[![NeurIPS2026](https://img.shields.io/badge/NeurIPS2026-68448b.svg)](https://neurips.cc/Conferences/2026)
+[![NeurIPS2026](https://img.shields.io/badge/NeurIPS2026-68448b.svg)](https://neurips.cc/virtual/2026/loc/atlanta/poster/155602)
 
 Code to reproduce the CIFAR-10 results in **"Analytical Correction for Subsampling Bias in Drifting Models"**.
 
